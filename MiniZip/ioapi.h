@@ -48,6 +48,10 @@
 #  define USE_FILE32API
 #endif
 
+#ifdef __ANDROID__
+#  define USE_FILE32API
+#endif
+
 #if defined(USE_FILE32API)
 #define fopen64 fopen
 #define ftello64 ftell
