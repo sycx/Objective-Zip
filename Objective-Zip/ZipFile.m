@@ -31,16 +31,24 @@
 //  POSSIBILITY OF SUCH DAMAGE.
 //
 
+#include "zip.h"
+#include "unzip.h"
+
 #import "ZipFile.h"
 #import "ZipException.h"
 #import "ZipReadStream.h"
 #import "ZipWriteStream.h"
 #import "FIleInZipInfo.h"
 
+
 #define FILE_IN_ZIP_MAX_NAME_LENGTH (256)
 
 
 @implementation ZipFile
+{
+	zipFile _zipFile;
+	unzFile _unzFile;
+}
 
 
 - (id) initWithFileName:(NSString *)fileName mode:(ZipFileMode)mode {

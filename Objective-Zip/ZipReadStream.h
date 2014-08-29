@@ -34,8 +34,7 @@
 #import <Foundation/Foundation.h>
 #import "ARCHelper.h"
 
-#include "unzip.h"
-
+typedef void* unzFile;
 
 @interface ZipReadStream : NSObject {
 	NSString *_fileNameInZip;

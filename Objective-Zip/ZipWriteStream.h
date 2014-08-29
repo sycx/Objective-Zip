@@ -34,8 +34,7 @@
 #import <Foundation/Foundation.h>
 #import "ARCHelper.h"
 
-#include "zip.h"
-
+typedef void* zipFile;
 
 @interface ZipWriteStream : NSObject {
 	NSString *_fileNameInZip;

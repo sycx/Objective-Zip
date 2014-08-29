@@ -34,10 +34,6 @@
 #import <Foundation/Foundation.h>
 #import "ARCHelper.h"
 
-#include "zip.h"
-#include "unzip.h"
-
-
 typedef enum {
 	ZipFileModeUnzip,
 	ZipFileModeCreate,
@@ -58,10 +54,6 @@ typedef enum {
 @interface ZipFile : NSObject {
 	NSString *_fileName;
 	ZipFileMode _mode;
-
-@private
-	zipFile _zipFile;
-	unzFile _unzFile;
 }
 
 - (id) initWithFileName:(NSString *)fileName mode:(ZipFileMode)mode;
