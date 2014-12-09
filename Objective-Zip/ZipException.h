@@ -32,7 +32,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARCHelper.h"
+#import <ObjectiveZip/ARCHelper.h>
 
 
 @interface ZipException : NSException {
